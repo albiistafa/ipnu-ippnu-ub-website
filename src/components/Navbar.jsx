@@ -92,9 +92,6 @@ function Navbar() {
               >
                 Kegiatan
               </button>
-              <a href="#beranda" className="text-gray-600 hover:text-emerald-600 transition-colors">Beranda</a>
-              <a href="#profil" className="text-gray-600 hover:text-emerald-600 transition-colors">Profil</a>
-              <a href="#kegiatan" className="text-gray-600 hover:text-emerald-600 transition-colors">Kegiatan</a>
               <Link to="/makesta" className="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors text-center">
                 Makesta
               </Link>
