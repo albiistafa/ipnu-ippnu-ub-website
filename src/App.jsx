@@ -272,7 +272,7 @@ function Makesta() {
               </div>
             
               <div className="flex items-start">
-                <div className="bg-emerald-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">3</div>
+                <div className="bg-emerald-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">2</div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-emerald-700">Pelaksanaan</h3>
                   <p className="text-gray-600">TBA</p>
