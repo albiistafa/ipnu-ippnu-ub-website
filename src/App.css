@@ -8,10 +8,6 @@ body {
   background: linear-gradient(to bottom right, #ffffff, #c8facc);
   color: #2e7d32;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 /* Swiper Custom Styles */
@@ -74,4 +70,14 @@ body {
   margin-top: auto;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+.dept-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s;
+  will-change: transform;
+}
+.dept-card:hover {
+  transform: scale(1.15) rotateY(10deg) rotateX(2deg);
+  box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.15);
+  z-index: 2;
 }

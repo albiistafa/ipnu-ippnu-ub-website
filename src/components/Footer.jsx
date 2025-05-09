@@ -41,8 +41,11 @@ function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-100 text-center">
+        <p className="text-gray-600 text-sm">
+           Made with ❤️ by Dakwah Media dan Digitalisasi Organisasi
+          </p>
           <p className="text-gray-600 text-sm">
-            © {new Date().getFullYear()} DAKWAH MEDIA DAN DIGITALISASI ORGANISASI IPNU IPPNU Universitas Brawijaya. All rights reserved.
+            © {new Date().getFullYear()} IPNU IPPNU Universitas Brawijaya. All rights reserved.
           </p>
         </div>
       </div>
