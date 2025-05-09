@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -146,10 +146,9 @@ function Home() {
           </h2>
           
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Pagination, Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
-            navigation
             pagination={{ clickable: true }}
             autoplay={{
               delay: 3000,
@@ -271,13 +270,7 @@ function Makesta() {
                   <p className="text-gray-600">TBA</p>
                 </div>
               </div>
-              <div className="flex items-start">
-                <div className="bg-emerald-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">2</div>
-                <div className="ml-4">
-                  <h3 className="font-semibold text-emerald-700">Seleksi</h3>
-                  <p className="text-gray-600">TBA</p>
-                </div>
-              </div>
+            
               <div className="flex items-start">
                 <div className="bg-emerald-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">3</div>
                 <div className="ml-4">
