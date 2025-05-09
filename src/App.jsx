@@ -1,6 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 // Halaman Utama
 function Home() {
@@ -82,37 +87,86 @@ function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-emerald-800 text-center mb-12">Kegiatan Terbaru</h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="pb-12"
+          >
             {/* Kegiatan 1 */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <img src="/kegiatan1.jpg" alt="Kegiatan 1" className="w-full h-48 object-cover" />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-emerald-700 mb-2">Diskusi Keislaman</h3>
-                <p className="text-gray-600 mb-4">Diskusi rutin membahas isu-isu keislaman kontemporer</p>
-                <span className="text-sm text-emerald-500">Setiap Sabtu, 09:00 WIB</span>
+            <SwiperSlide>
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <img src="/kegiatan1.jpg" alt="Kegiatan 1" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-emerald-700 mb-2">Diskusi Keislaman</h3>
+                  <p className="text-gray-600 mb-4">Diskusi rutin membahas isu-isu keislaman kontemporer</p>
+                  <span className="text-sm text-emerald-500">Setiap Sabtu, 09:00 WIB</span>
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
 
             {/* Kegiatan 2 */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <img src="/kegiatan2.jpg" alt="Kegiatan 2" className="w-full h-48 object-cover" />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-emerald-700 mb-2">Kajian Kitab</h3>
-                <p className="text-gray-600 mb-4">Kajian kitab kuning untuk penguatan pemahaman keislaman</p>
-                <span className="text-sm text-emerald-500">Setiap Ahad, 08:00 WIB</span>
+            <SwiperSlide>
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <img src="/kegiatan2.jpg" alt="Kegiatan 2" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-emerald-700 mb-2">Kajian Kitab</h3>
+                  <p className="text-gray-600 mb-4">Kajian kitab kuning untuk penguatan pemahaman keislaman</p>
+                  <span className="text-sm text-emerald-500">Setiap Ahad, 08:00 WIB</span>
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
 
             {/* Kegiatan 3 */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <img src="/kegiatan3.jpg" alt="Kegiatan 3" className="w-full h-48 object-cover" />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-emerald-700 mb-2">Pelatihan Kepemimpinan</h3>
-                <p className="text-gray-600 mb-4">Program pengembangan soft skills dan kepemimpinan</p>
-                <span className="text-sm text-emerald-500">Setiap Bulan</span>
+            <SwiperSlide>
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <img src="/kegiatan3.jpg" alt="Kegiatan 3" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-emerald-700 mb-2">Pelatihan Kepemimpinan</h3>
+                  <p className="text-gray-600 mb-4">Program pengembangan soft skills dan kepemimpinan</p>
+                  <span className="text-sm text-emerald-500">Setiap Bulan</span>
+                </div>
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+
+            {/* Kegiatan 4 */}
+            <SwiperSlide>
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <img src="/kegiatan4.jpg" alt="Kegiatan 4" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-emerald-700 mb-2">Workshop Digital</h3>
+                  <p className="text-gray-600 mb-4">Pelatihan pengembangan konten digital dan media sosial</p>
+                  <span className="text-sm text-emerald-500">Setiap 2 Minggu</span>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Kegiatan 5 */}
+            <SwiperSlide>
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <img src="/kegiatan5.jpg" alt="Kegiatan 5" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-emerald-700 mb-2">Bakti Sosial</h3>
+                  <p className="text-gray-600 mb-4">Program pengabdian masyarakat dan bantuan sosial</p>
+                  <span className="text-sm text-emerald-500">Setiap 3 Bulan</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
     </div>

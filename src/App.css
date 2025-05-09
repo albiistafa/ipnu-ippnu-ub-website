@@ -14,6 +14,25 @@ body {
   text-align: center;
 }
 
+/* Swiper Custom Styles */
+.swiper {
+  width: 100%;
+  padding-bottom: 3rem !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #059669 !important;
+}
+
+.swiper-pagination-bullet {
+  background: #059669 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #059669 !important;
+}
+
 .landing-container {
   display: flex;
   flex-direction: column;
