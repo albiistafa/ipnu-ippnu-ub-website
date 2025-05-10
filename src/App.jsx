@@ -16,6 +16,7 @@ import Eksternal from "./assets/eksternal.svg";
 import Amaliah from "./assets/amaliyah.svg";
 import heroImage from "./assets/DSC04938.jpg";
 import anjangsana from "./assets/anjangsana.jpeg"
+import gathering from "./assets/gathering.jpeg"
 import "./App.css";
 
 // Tambahkan data departemen
@@ -316,7 +317,7 @@ function Home() {
             <SwiperSlide>
               <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col min-h-[340px] md:min-h-[400px]">
                 <img
-                  src="/kegiatan3.jpg"
+                  src={gathering}
                   alt="Kegiatan 3"
                   className="w-full h-40 md:h-48 object-cover"
                 />
