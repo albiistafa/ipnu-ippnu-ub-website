@@ -8,7 +8,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import talenta from './assets/talenta.svg'
 import organisasi from './assets/organisasi.svg'
 import media from './assets/media.svg'
@@ -17,8 +17,34 @@ import Amaliah from './assets/amaliyah.svg'
 import heroImage from './assets/DSC04938.jpg'
 import './App.css'
 
+// Tambahkan data departemen
+const DEPARTEMEN_DATA = {
+  talenta: {
+    nama: "DEPARTEMEN PENINGKATAN PRESTASI AKADEMIK DAN PENGEMBANGAN TALENTA",
+    deskripsi: "Mendorong partisipasi dalam lomba, kegiatan ilmiah, seni, dan olahraga, serta mengembangkan wawasan dan keterampilan melalui klub, festival, dan pemanfaatan sarana edukatif."
+  },
+  organisasi: {
+    nama: "DEPARTEMEN PENGEMBANGAN ORGANISASI",
+    deskripsi: "Mengelola perencanaan, pengembangan, dan evaluasi program kerja serta administrasi organisasi secara berkala dan terarah."
+  },
+  media: {
+    nama: "DEPARTEMEN MEDIA DAKWAH DAN DIGITALISASI ORGANISASI",
+    deskripsi: "Mengoptimalkan TIK sebagai sarana kreativitas, inovasi, dakwah, dan pengelolaan media organisasi, serta pengembangan talenta melalui pelatihan."
+  },
+  eksternal: {
+    nama: "DEPARTEMEN PENGUATAN HUBUNGAN EKSTERNAL",
+    deskripsi: "Membangun koordinasi dan kolaborasi aktif dengan PAC, PC, PK lain, serta organisasi kemahasiswaan di tingkat fakultas dan universitas."
+  },
+  amaliah: {
+    nama: "DEPARTEMEN PENGUATAN AMALIAH DAN PENDIDIKAN ASWAJA",
+    deskripsi: "Menumbuhkan nilai keagamaan dan kebangsaan melalui peringatan hari besar, kegiatan amaliah, pembinaan toleransi, serta pemberdayaan aktivitas keagamaan di kampus."
+  }
+}
+
 // Halaman Utama
 function Home() {
+  const [activeDept, setActiveDept] = useState(null)
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -71,16 +97,34 @@ function Home() {
             <div className="bg-emerald-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
               <h3 className="text-lg md:text-xl font-semibold text-emerald-700 mb-4">Visi</h3>
               <p className="text-gray-600 text-sm md:text-base">
-                Menjadi organisasi pelajar NU yang unggul dalam pengembangan generasi muda yang berakhlak, 
-                berwawasan kebangsaan, dan berdaya saing global.
+              Mewujudkan pelajar Universitas
+Brawijaya yang bertakwa, berakhlakul
+karimah, progresif, dan inovatif, dengan
+menguasai ilmu pengetahuan dan teknologi
+serta berkarakter Islami, berwawasan global,
+dan peduli terhadap masyarakat, demi
+terciptanya generasi yang harmonis,
+sejahtera, dan berkontribusi nyata bagi
+kemajuan bangsa.
               </p>
             </div>
             <div className="bg-emerald-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
               <h3 className="text-lg md:text-xl font-semibold text-emerald-700 mb-4">Misi</h3>
               <ul className="text-gray-600 text-sm md:text-base list-disc list-inside space-y-2">
-                <li>Mengembangkan pendidikan dan pengkaderan yang berorientasi pada nilai-nilai Islam Ahlussunnah Wal Jamaah</li>
-                <li>Membina dan mengembangkan potensi pelajar dalam berbagai bidang</li>
-                <li>Menguatkan jaringan dan sinergi dengan berbagai pihak</li>
+                <li>Meningkatkan keimanan, ketakwaan, dan pemahaman
+Islam yang moderat melalui pembinaan spiritual, kajian
+rutin, dan kegiatan keagamaan.</li>
+                <li>Mengembangkan kaderisasi yang inovatif untuk
+membentuk anggota yang kompeten, santun, dan
+bertanggung jawab.</li>
+                <li>Membangun lingkungan organisasi yang mendukung
+kreativitas, partisipasi, dan pengembangan potensi
+anggota secara menyeluruh.</li>
+                <li>Mempererat kerja sama dengan organisasi mahasiswa
+dan lembaga lain untuk mendukung toleransi dan
+keberagaman.</li>
+                <li>Mendorong anggota berkontribusi bagi masyarakat
+                melalui kegiatan sosial dan pengabdian.</li>
               </ul>
             </div>
           </div>
@@ -89,50 +133,39 @@ function Home() {
           <div className="mb-8 md:mb-12">
             <h3 className="text-xl md:text-2xl font-semibold text-emerald-700 text-center mb-4 md:mb-6" data-aos="fade-up">Departemen</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 justify-items-center">
-              <div data-aos="zoom-in" data-aos-delay="100" className="flex flex-col items-center">
-                <img src={talenta} alt="Departemen Talenta" className="dept-card w-16 h-16 sm:w-20 sm:h-20 object-contain mb-1" />
-                <p className="text-center text-emerald-700 text-xs sm:text-sm font-medium mt-1">Talenta</p>
-              </div>
-              <div data-aos="zoom-in" data-aos-delay="200" className="flex flex-col items-center">
-                <img src={organisasi} alt="Departemen Organisasi" className="dept-card w-16 h-16 sm:w-20 sm:h-20 object-contain mb-1" />
-                <p className="text-center text-emerald-700 text-xs sm:text-sm font-medium mt-1">Organisasi</p>
-              </div>
-              <div data-aos="zoom-in" data-aos-delay="300" className="flex flex-col items-center">
-                <img src={media} alt="Departemen Media" className="dept-card w-16 h-16 sm:w-20 sm:h-20 object-contain mb-1" />
-                <p className="text-center text-emerald-700 text-xs sm:text-sm font-medium mt-1">Media</p>
-              </div>
-              <div data-aos="zoom-in" data-aos-delay="400" className="flex flex-col items-center">
-                <img src={Eksternal} alt="Departemen Eksternal" className="dept-card w-16 h-16 sm:w-20 sm:h-20 object-contain mb-1" />
-                <p className="text-center text-emerald-700 text-xs sm:text-sm font-medium mt-1">Eksternal</p>
-              </div>
-              <div data-aos="zoom-in" data-aos-delay="500" className="flex flex-col items-center">
-                <img src={Amaliah} alt="Departemen Amaliah" className="dept-card w-16 h-16 sm:w-20 sm:h-20 object-contain mb-1" />
-                <p className="text-center text-emerald-700 text-xs sm:text-sm font-medium mt-1">Amaliah</p>
-              </div>
+              {Object.entries(DEPARTEMEN_DATA).map(([key, dept]) => (
+                <div 
+                  key={key}
+                  data-aos="zoom-in" 
+                  data-aos-delay={Object.keys(DEPARTEMEN_DATA).indexOf(key) * 100}
+                  className="flex flex-col items-center cursor-pointer"
+                  onClick={() => setActiveDept(activeDept === key ? null : key)}
+                >
+                  <img 
+                    src={key === 'talenta' ? talenta : 
+                         key === 'organisasi' ? organisasi :
+                         key === 'media' ? media :
+                         key === 'eksternal' ? Eksternal : Amaliah} 
+                    alt={`Departemen ${dept.nama}`} 
+                    className={`dept-card w-16 h-16 sm:w-20 sm:h-20 object-contain mb-1 transition-all duration-300 ${
+                      activeDept === key ? 'scale-125' : ''
+                    }`} 
+                  />
+                  
+                </div>
+              ))}
             </div>
-          </div>
-
-          <div className="bg-emerald-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
-            <h3 className="text-lg md:text-xl font-semibold text-emerald-700 mb-4 text-center">Struktur Organisasi</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              <div className="text-center" data-aos="zoom-in" data-aos-delay="400">
-                <div className="bg-white p-4 rounded-lg shadow-sm mb-4">
-                  <h4 className="font-semibold text-emerald-700">Ketua Ipnu</h4>
-                  <p className="text-gray-600 text-xs md:text-base">Gus Iqdam Penceng</p>
+            
+            {/* Deskripsi Departemen */}
+            <div className={`mt-8 transition-all duration-300 ease-in-out ${
+              activeDept ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0'
+            } overflow-hidden`}>
+              {activeDept && (
+                <div className="bg-emerald-50 p-4 rounded-lg shadow-sm" data-aos="fade-up">
+                  <h4 className="text-lg font-semibold text-emerald-700 mb-2">{DEPARTEMEN_DATA[activeDept].nama}</h4>
+                  <p className="text-gray-600 text-sm md:text-base">{DEPARTEMEN_DATA[activeDept].deskripsi}</p>
                 </div>
-              </div>
-              <div className="text-center" data-aos="zoom-in" data-aos-delay="500">
-                <div className="bg-white p-4 rounded-lg shadow-sm mb-4">
-                  <h4 className="font-semibold text-emerald-700">Ketua Ippnu</h4>
-                  <p className="text-gray-600 text-xs md:text-base">Ning Dian</p>
-                </div>
-              </div>
-              <div className="text-center" data-aos="zoom-in" data-aos-delay="600">
-                <div className="bg-white p-4 rounded-lg shadow-sm mb-4">
-                  <h4 className="font-semibold text-emerald-700">Programmer</h4>
-                  <p className="text-gray-600 text-xs md:text-base">Albi Jago</p>
-                </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

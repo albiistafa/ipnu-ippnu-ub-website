@@ -73,11 +73,28 @@ body {
 }
 
 .dept-card {
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s;
-  will-change: transform;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
 }
+
 .dept-card:hover {
   transform: scale(1.15) rotateY(10deg) rotateX(2deg);
   box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.15);
   z-index: 2;
+}
+
+/* Animasi untuk deskripsi departemen */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dept-description {
+  animation: slideDown 0.3s ease-out forwards;
 }

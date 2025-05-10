@@ -76,12 +76,12 @@ function Navbar() {
             <Link to="/makesta" className="text-emerald-800 hover:text-emerald-600 transition-colors font-medium">
               Makesta
             </Link>
-            <a
-              href="#daftar"
+            <Link
+              to="/makesta"
               className="bg-emerald-500 text-white px-6 py-2.5 rounded-full hover:bg-emerald-600 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 ml-2"
             >
               Daftar
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -135,13 +135,13 @@ function Navbar() {
             >
               Makesta
             </Link>
-            <a
-              href="#daftar"
+            <Link
+              to="/makesta"
               className="inline-block bg-emerald-500 text-white px-6 py-2.5 rounded-full hover:bg-emerald-600 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Daftar
-            </a>
+            </Link>
           </div>
         </div>
       </div>
