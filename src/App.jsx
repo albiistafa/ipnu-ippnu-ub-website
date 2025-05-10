@@ -15,6 +15,7 @@ import media from "./assets/media.svg";
 import Eksternal from "./assets/eksternal.svg";
 import Amaliah from "./assets/amaliyah.svg";
 import heroImage from "./assets/DSC04938.jpg";
+import anjangsana from "./assets/anjangsana.jpeg"
 import "./App.css";
 
 // Tambahkan data departemen
@@ -324,10 +325,11 @@ function Home() {
                     Gathering dan Buka Bersama
                   </h3>
                   <p className="text-gray-600 mb-4 flex-1 text-xs md:text-base">
-                    Program pengembangan soft skills dan kepemimpinan
+                  Kegiatan yang diselenggarakan pada bulan Ramadan sebagai ajang mempererat tali silaturahmi antara anggota dan alumni sekaligus buka puasa bersama.
+
                   </p>
                   <span className="text-xs md:text-sm text-emerald-500 mt-auto">
-                    Setiap Bulan
+                    15 Maret 2025
                   </span>
                 </div>
               </div>
@@ -337,7 +339,7 @@ function Home() {
             <SwiperSlide>
               <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col min-h-[340px] md:min-h-[400px]">
                 <img
-                  src="/kegiatan4.jpg"
+                  src={anjangsana}
                   alt="Kegiatan 4"
                   className="w-full h-40 md:h-48 object-cover"
                 />
@@ -346,10 +348,10 @@ function Home() {
                     Anjangsana
                   </h3>
                   <p className="text-gray-600 mb-4 flex-1 text-xs md:text-base">
-                    Pelatihan pengembangan konten digital dan media sosial
+                  Halal Bi Halal dan ajang silaturrahmi kepada para pembina dan alumni IPNU IPPNU UB
                   </p>
                   <span className="text-xs md:text-sm text-emerald-500 mt-auto">
-                    Setiap 2 Minggu
+                    11-12 April 2025
                   </span>
                 </div>
               </div>
