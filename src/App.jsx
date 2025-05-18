@@ -368,13 +368,13 @@ function Home() {
                 />
                 <div className="p-4 md:p-6 flex flex-col flex-1">
                   <h3 className="text-lg md:text-xl font-semibold text-emerald-700 mb-2">
-                    Bakti Sosial
+                    Saung Ilmu
                   </h3>
                   <p className="text-gray-600 mb-4 flex-1 text-xs md:text-base">
-                    Program pengabdian masyarakat dan bantuan sosial
+                    Saung Ilmu merupakan tempat dimana teman-teman akan belajar tentang hadis-hadis nabi berdasarkan kitab Arbain Nawawi
                   </p>
                   <span className="text-xs md:text-sm text-emerald-500 mt-auto">
-                    Setiap 3 Bulan
+                    Setiap Kamis, 16.00 WIB Masjid Nurul Falah FP UB
                   </span>
                 </div>
               </div>
