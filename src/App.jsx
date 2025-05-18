@@ -17,6 +17,8 @@ import Amaliah from "./assets/amaliyah.svg";
 import heroImage from "./assets/DSC04938.jpg";
 import anjangsana from "./assets/anjangsana.jpeg"
 import gathering from "./assets/gathering.jpeg"
+import kajian from "./assets/kajian.jpg"
+import saung from "./assets/saung.jpg"
 import "./App.css";
 
 // Tambahkan data departemen
@@ -295,19 +297,19 @@ function Home() {
             <SwiperSlide>
               <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col min-h-[340px] md:min-h-[400px]">
                 <img
-                  src="/kegiatan2.jpg"
+                  src={kajian}
                   alt="Kegiatan 2"
                   className="w-full h-40 md:h-48 object-cover"
                 />
                 <div className="p-4 md:p-6 flex flex-col flex-1">
                   <h3 className="text-lg md:text-xl font-semibold text-emerald-700 mb-2">
-                    Kajian Ramadhan
+                    Kajian Ramadhan 1446 H
                   </h3>
                   <p className="text-gray-600 mb-4 flex-1 text-xs md:text-base">
-                    Kajian kitab kuning untuk penguatan pemahaman keislaman
+                    Kajian kitab Tanqihul Qoul merupakan kajian yang diadakan setiap hari selama bulan Ramadhan 1446 H.
                   </p>
                   <span className="text-xs md:text-sm text-emerald-500 mt-auto">
-                    Setiap Ahad, 08:00 WIB
+                    Setiap Hari Selama Bulan Ramadhan 1446 H
                   </span>
                 </div>
               </div>
@@ -349,7 +351,7 @@ function Home() {
                     Anjangsana
                   </h3>
                   <p className="text-gray-600 mb-4 flex-1 text-xs md:text-base">
-                  Halal Bi Halal dan ajang silaturrahmi kepada para pembina dan alumni IPNU IPPNU UB
+                  Halal Bi Halal dan ajang silaturahmi kepada para pembina dan alumni IPNU IPPNU UB
                   </p>
                   <span className="text-xs md:text-sm text-emerald-500 mt-auto">
                     11-12 April 2025
@@ -362,7 +364,7 @@ function Home() {
             <SwiperSlide>
               <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col min-h-[340px] md:min-h-[400px]">
                 <img
-                  src="/kegiatan5.jpg"
+                  src={saung}
                   alt="Kegiatan 5"
                   className="w-full h-40 md:h-48 object-cover"
                 />
