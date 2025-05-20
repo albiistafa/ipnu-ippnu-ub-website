@@ -77,7 +77,7 @@ function Navbar() {
               Makesta
             </Link>
             <Link
-              to="/makesta"
+              to="https://bit.ly/OPRECPKUB2025"
               className="bg-emerald-500 text-white px-6 py-2.5 rounded-full hover:bg-emerald-600 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 ml-2"
             >
               Daftar
