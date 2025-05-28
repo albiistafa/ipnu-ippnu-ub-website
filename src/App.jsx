@@ -462,7 +462,7 @@ function Makesta() {
               ini:
             </p>
             <a
-              href="#"
+              href="https://docs.google.com/forms/d/1lvyM9sfSjkHKDbKmehY8jWsoADLMA0EvexSMF3BaHEM/edit"
               className="inline-block bg-emerald-500 text-white px-6 py-3 rounded-lg hover:bg-emerald-600 transition-colors"
             >
               Daftar Sekarang
