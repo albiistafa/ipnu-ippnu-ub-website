@@ -413,11 +413,11 @@ function Makesta() {
                 <h3 className="font-semibold text-emerald-700 mb-2">
                   Waktu Pelaksanaan
                 </h3>
-                <p className="text-gray-600">TBA</p>
+                <p className="text-gray-600">21 - 22 Juni 2025</p>
               </div>
               <div>
                 <h3 className="font-semibold text-emerald-700 mb-2">Lokasi</h3>
-                <p className="text-gray-600">Universitas Brawijaya</p>
+                <p className="text-gray-600">TBA</p>
               </div>
             </div>
           </div>
@@ -435,7 +435,7 @@ function Makesta() {
                   <h3 className="font-semibold text-emerald-700">
                     Pendaftaran
                   </h3>
-                  <p className="text-gray-600">TBA</p>
+                  <p className="text-gray-600">29 Mei - 18 Juni 2025</p>
                 </div>
               </div>
 
@@ -447,7 +447,7 @@ function Makesta() {
                   <h3 className="font-semibold text-emerald-700">
                     Pelaksanaan
                   </h3>
-                  <p className="text-gray-600">TBA</p>
+                  <p className="text-gray-600">21 - 22 Juni 2025</p>
                 </div>
               </div>
             </div>
