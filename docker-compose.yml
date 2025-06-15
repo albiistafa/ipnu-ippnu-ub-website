@@ -1,7 +1,7 @@
 version: '2.2'
 
 services:
-  nextjs-app:
+  react-app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,7 +11,7 @@ services:
       - NODE_ENV=production
     restart: unless-stopped
     volumes:
-      - ./logs:/app/logs
+      - ./websiteIpnu/logs:/app/logs
       - /opt/prod-stack/data/logs:/app/system-logs  
     networks:
       - prod-network

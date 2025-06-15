@@ -1,46 +1,24 @@
 # Base image
-FROM node:18-alpine AS base
+FROM node:18-alpine
 
-# Install dependencies only when needed
-FROM base AS deps
-RUN apk add --no-cache libc6-compat
+# Set working directory
 WORKDIR /app
 
 # Install dependencies
-COPY package.json package-lock.json* ./
+COPY websiteIpnu/package.json websiteIpnu/package-lock.json* ./
 RUN npm ci
 
-# Rebuild the source code only when needed
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+# Copy source code
+COPY websiteIpnu/ .
 
 # Build the app
 RUN npm run build
 
-# Production image, copy all the files and run next
-FROM base AS runner
-WORKDIR /app
+# Install serve to run the application
+RUN npm install -g serve
 
-ENV NODE_ENV production
-
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-# Copy the entire built application
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-
-RUN chown -R nextjs:nodejs /app
-
-USER nextjs
-
+# Expose port
 EXPOSE 3001
 
-ENV PORT 3001
-ENV HOSTNAME "0.0.0.0"
-
-CMD ["npm", "start"] 
+# Start the application
+CMD ["serve", "-s", "build", "-l", "3001"] 
