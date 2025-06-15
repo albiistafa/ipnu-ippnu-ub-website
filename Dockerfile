@@ -5,11 +5,11 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Install dependencies
-COPY websiteIpnu/package.json websiteIpnu/package-lock.json* ./
+COPY package.json package-lock.json ./
 RUN npm ci
 
 # Copy source code
-COPY websiteIpnu/ .
+COPY . .
 
 # Build the app
 RUN npm run build
@@ -21,4 +21,4 @@ RUN npm install -g serve
 EXPOSE 3001
 
 # Start the application
-CMD ["serve", "-s", "build", "-l", "3001"] 
+CMD ["serve", "-s", "dist", "-l", "3001"] 
